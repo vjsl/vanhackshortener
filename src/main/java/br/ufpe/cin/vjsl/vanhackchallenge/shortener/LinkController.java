@@ -42,5 +42,9 @@ public class LinkController {
         });
 
     }
+    @GetMapping (path = "/count")
+    public @ResponseBody String count(){
+        return "Generated "+linkRepository.count()+" shortened links";
+    }
 
 }
