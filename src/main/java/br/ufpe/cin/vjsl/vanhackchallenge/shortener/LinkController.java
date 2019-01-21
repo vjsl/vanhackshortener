@@ -24,7 +24,7 @@ public class LinkController {
         l.setShortened(RandomStringUtils.random(6, "abcdefghijklmnopqrstuvwxyz0123456789"));
         linkRepository.save(l);
         httpServletResponse.setStatus(HttpServletResponse.SC_OK);
-        return "localhost:8080/"+l.getShortened();
+        return "localhost/"+l.getShortened();
     }
 
     @RequestMapping(value="/{code}", method=RequestMethod.GET)
